@@ -23,47 +23,46 @@ This project integrates big data technologies to analyze Amazon customer reviews
 
 3. **Download the dataset:**
    - The dataset can be found [here on Kaggle](https://www.kaggle.com/datasets/yacharki/amazon-reviews-for-sa-binary-negative-positive-csv).
-   - Place the dataset in the `data/` folder.
+   - Place the dataset in a folder named `data/` within the project directory.
 
 ## Usage
 
-1. **Preprocessing:**
+1. **Run the Pipeline:**
+   Execute the entire pipeline (preprocessing, training, and evaluation) using the following command:
    ```bash
-   python preprocessing.py
+   python project_Amazon.py
    ```
 
-2. **Training:**
-   ```bash
-   python training.py
-   ```
-
-3. **Evaluation:**
-   ```bash
-   python evaluation.py
-   ```
+2. **Outputs:**
+   - **Metrics**: Accuracy, precision, recall, and F1-score.
+   - **Visualizations**: Accuracy by class, confusion matrix, and word cloud.
+   - Outputs are saved in the `results/` folder.
 
 ## Results
-- **Accuracy:** 74%
-- **Precision:** 73%
-- **Recall:** 75%
-- **F1-Score:** 74%
+The pipeline achieved the following metrics on the test dataset:
+- **Accuracy**: 74%
+- **Precision**: 73%
+- **Recall**: 75%
+- **F1-Score**: 74%
+
+These results demonstrate the model's effectiveness in classifying Amazon reviews.
 
 ### Visualizations
-- Accuracy by Class
-- Confusion Matrix
-- Word Cloud
+The following visualizations provide insights into the dataset and model performance:
 
-All visual outputs are stored in the `assets/` folder for reference.
+#### Accuracy by Class
+![Accuracy by Class](assets/accuracy_by_class.png)
+
+#### Confusion Matrix
+![Confusion Matrix](assets/confusion_matrix.png)
+
+#### Word Cloud of Text Data
+![Word Cloud](assets/word_cloud.png)
 
 ## Ethical Considerations
-
-1. **Bias in Dataset:**
-   - The dataset may reflect biases inherent in user reviews (e.g., language variations, cultural differences).
-   - Future iterations can include additional datasets to mitigate such biases.
-
-2. **Data Privacy:**
-   - All dataset rows were anonymized to ensure compliance with data privacy regulations (e.g., GDPR).
-   - Preprocessing steps maintained strict safeguards to prevent exposing sensitive information.
+- The dataset used in this project was anonymized, ensuring no personally identifiable information (PII) is present.
+- Potential biases in sentiment classification due to language or cultural variations are acknowledged and may impact results.
+- Safeguards were implemented during preprocessing to avoid overfitting and biased model predictions.
 
 ## Contributing
 Contributions are welcome! Please follow these steps:
@@ -88,5 +87,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Contact
 For any questions or feedback, please reach out:
 - **Email:** ab.akram@nu.edu.eg
-- **GitHub:** Abdelrhman62(https://github.com/Abdelrhman62)
-
+- **GitHub:** [Abdelrhman62](https://github.com/Abdelrhman62)
