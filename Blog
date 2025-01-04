@@ -1,0 +1,85 @@
+# Sentiment Analysis on Amazon Reviews Using Apache Spark
+
+## Introduction
+E-commerce platforms generate vast amounts of customer reviews every day. These reviews offer valuable insights into customer sentiments but analyzing them at scale is a significant challenge. To address this, we developed a sentiment analysis pipeline leveraging Apache Spark and Logistic Regression. This project processes and classifies Amazon reviews as positive or negative, providing actionable insights for businesses while ensuring scalability and efficiency.
+
+## Motivation
+In the digital age, businesses thrive on understanding customer feedback. However, analyzing large-scale textual data requires robust preprocessing and machine learning techniques. Our project aims to:
+- Develop a scalable system for sentiment classification.
+- Enhance model performance through preprocessing and feature engineering.
+- Contribute to the community by sharing tools and insights.
+
+## Dataset
+The dataset used is sourced from [Kaggle](https://www.kaggle.com/datasets/yacharki/amazon-reviews-for-sa-binary-negative-positive-csv). It contains labeled Amazon reviews categorized into positive (1) and negative (0). Key statistics include:
+- **Training Samples**: 25,000
+- **Testing Samples**: 5,000
+- **Vocabulary Size**: 20,000 words (after preprocessing)
+
+## Methodology
+
+### Data Preprocessing
+To ensure data quality and reliability, we applied the following preprocessing steps:
+1. **Handling Missing Data**:
+   - Removed rows with missing sentiment labels.
+   - Replaced missing review texts with empty strings.
+2. **Noise Removal**:
+   - Filtered out reviews with less than five characters.
+   - Added a `review_length` column to identify noisy data.
+3. **Text Transformation**:
+   - Tokenized review texts into words.
+   - Removed stop words to reduce noise.
+   - Applied TF-IDF vectorization to convert text into numerical features.
+4. **Feature Engineering**:
+   - Extracted and normalized 20,000-dimensional TF-IDF features.
+
+### Machine Learning Model
+We used Logistic Regression for its simplicity and scalability in binary classification tasks. Key steps included:
+- Training the model on preprocessed data using Apache Spark MLlib.
+- Evaluating the model using metrics like accuracy, precision, recall, and F1-score.
+
+### Results
+The model achieved the following performance metrics on the test dataset:
+- **Accuracy**: 74%
+- **Precision**: 73%
+- **Recall**: 75%
+- **F1-Score**: 74%
+
+## Visualizations
+To better understand the dataset and model performance, we generated the following visualizations:
+- **Accuracy by Class**: Illustrates classification accuracy across sentiment classes.
+- **Confusion Matrix**: Details true positives, false positives, true negatives, and false negatives.
+- **Word Cloud**: Highlights the most frequently occurring words in the dataset.
+
+![Accuracy by Class](assets/accuracy_by_class.png)
+![Confusion Matrix](assets/confusion_matrix.png)
+![Word Cloud](assets/word_cloud.png)
+
+## Contribution to the Community
+This project contributes to the broader community in the following ways:
+1. **Open-Source Contribution**:
+   - Uploaded the pipeline (preprocessing, training, evaluation) to [GitHub](https://github.com/Abdelrhman62/amazon-sentiment-analysis-pipeline).
+   - Included a detailed README with usage instructions and results.
+2. **Ethical Considerations**:
+   - Anonymized dataset to ensure no personally identifiable information (PII) is present.
+   - Addressed potential biases in the dataset, such as cultural or language variations.
+3. **Practical Applications**:
+   - The tools can be used by e-commerce platforms, social media analytics, and customer service systems to improve user experiences and engagement.
+
+## Future Work
+While this project demonstrates the potential of big data technologies in sentiment analysis, there is room for improvement:
+- Explore advanced deep learning models, such as transformers, for better performance.
+- Implement real-time sentiment analysis for live feedback systems.
+- Integrate additional datasets for a more diverse and unbiased analysis.
+
+## Call to Action
+Want to replicate or improve upon this project? Visit the [GitHub repository](https://github.com/Abdelrhman62/amazon-sentiment-analysis-pipeline) for code, instructions, and additional details. Contributions are welcome!
+
+## Acknowledgment
+This work was conducted as part of the academic curriculum at Nile University. We extend our gratitude to our instructors, peers, and colleagues for their valuable feedback and guidance.
+
+---
+
+### Contact
+For any questions or feedback, feel free to reach out:
+- **Email**: ab.akram@nu.edu.eg
+- **GitHub**: [Abdelrhman62](https://github.com/Abdelrhman62)
