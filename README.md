@@ -48,16 +48,14 @@ The pipeline achieved the following metrics on the test dataset:
 These results demonstrate the model's effectiveness in classifying Amazon reviews.
 
 ### Visualizations
-The following visualizations provide insights into the dataset and model performance:
+The following visualizations provide insights into the dataset and model performance(View them in the paper):
 
 #### Accuracy by Class
-![Accuracy by Class](assets/accuracy_by_class.png)
 
 #### Confusion Matrix
-![Confusion Matrix](assets/confusion_matrix.png)
 
 #### Word Cloud of Text Data
-![Word Cloud](assets/word_cloud.png)
+
 
 ## Ethical Considerations
 - The dataset used in this project was anonymized, ensuring no personally identifiable information (PII) is present.
